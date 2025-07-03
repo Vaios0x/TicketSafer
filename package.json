@@ -1,11 +1,36 @@
 {
+  "name": "ticketsafer-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS='--max-http-header-size=24576' vite --port 3005",
+    "dev:debug": "cross-env DEBUG=vite:* NODE_OPTIONS='--max-http-header-size=24576' vite --debug --port 3005",
+    "dev:network": "cross-env NODE_OPTIONS='--max-http-header-size=24576' vite --host --port 3005",
+    "build": "vite build",
+    "preview": "vite preview --port 24680",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist node_modules/.vite"
+  },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.7",
     "@tanstack/react-query": "^5.80.7",
     "framer-motion": "^12.18.1",
     "ipfs-http-client": "^60.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "viem": "^2.31.2",
     "wagmi": "^2.15.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.10",
+    "vite": "^5.0.0"
   }
 }
