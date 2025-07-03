@@ -1,0 +1,478 @@
+/* ===== EFECTOS NEÓN INCREÍBLES PARA ESTADÍSTICAS ===== */
+
+/* Propiedades CSS tipadas para animaciones de color */
+@property --stats-neon-color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #8A2BE2;
+}
+
+@property --stats-neon-color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #6366F1;
+}
+
+@property --stats-neon-color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #3B82F6;
+}
+
+/* Animaciones de resplandor increíbles para estadísticas */
+@keyframes stats-glow-pulse {
+  0%, 100% {
+    --stats-neon-color-1: #8A2BE2;
+    --stats-neon-color-2: #6366F1;
+    --stats-neon-color-3: #3B82F6;
+  }
+  20% {
+    --stats-neon-color-1: #9333EA;
+    --stats-neon-color-2: #4F46E5;
+    --stats-neon-color-3: #2563EB;
+  }
+  40% {
+    --stats-neon-color-1: #A855F7;
+    --stats-neon-color-2: #8B5CF6;
+    --stats-neon-color-3: #7C3AED;
+  }
+  60% {
+    --stats-neon-color-1: #7C3AED;
+    --stats-neon-color-2: #5B21B6;
+    --stats-neon-color-3: #1D4ED8;
+  }
+  80% {
+    --stats-neon-color-1: #6366F1;
+    --stats-neon-color-2: #3B82F6;
+    --stats-neon-color-3: #1E40AF;
+  }
+}
+
+/* Efecto de pulsación increíble pero elegante */
+@keyframes stats-pulse-subtle {
+  0%, 100% {
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.7),
+      0 0 6px var(--stats-neon-color-1),
+      0 0 12px var(--stats-neon-color-1),
+      0 0 18px var(--stats-neon-color-2);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow:
+      0 0 4px rgba(255, 255, 255, 0.9),
+      0 0 8px var(--stats-neon-color-1),
+      0 0 16px var(--stats-neon-color-1),
+      0 0 24px var(--stats-neon-color-2),
+      0 0 32px var(--stats-neon-color-3);
+    transform: scale(1.01);
+  }
+}
+
+/* Efecto de ondas de energía increíble */
+@keyframes stats-energy-wave {
+  0% {
+    box-shadow:
+      0 0 8px rgba(138, 43, 226, 0.3),
+      0 0 16px rgba(138, 43, 226, 0.2),
+      inset 0 0 12px rgba(138, 43, 226, 0.1),
+      0 0 32px rgba(138, 43, 226, 0.05);
+  }
+  25% {
+    box-shadow:
+      0 0 12px rgba(99, 102, 241, 0.4),
+      0 0 20px rgba(99, 102, 241, 0.25),
+      inset 0 0 16px rgba(99, 102, 241, 0.15),
+      0 0 40px rgba(99, 102, 241, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 16px rgba(59, 130, 246, 0.5),
+      0 0 24px rgba(59, 130, 246, 0.3),
+      inset 0 0 20px rgba(59, 130, 246, 0.2),
+      0 0 48px rgba(59, 130, 246, 0.1);
+  }
+  75% {
+    box-shadow:
+      0 0 12px rgba(99, 102, 241, 0.4),
+      0 0 20px rgba(99, 102, 241, 0.25),
+      inset 0 0 16px rgba(99, 102, 241, 0.15),
+      0 0 40px rgba(99, 102, 241, 0.08);
+  }
+  100% {
+    box-shadow:
+      0 0 8px rgba(138, 43, 226, 0.3),
+      0 0 16px rgba(138, 43, 226, 0.2),
+      inset 0 0 12px rgba(138, 43, 226, 0.1),
+      0 0 32px rgba(138, 43, 226, 0.05);
+  }
+}
+
+/* Animación de flotación increíble para stats */
+@keyframes stats-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotate(0.3deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(-0.3deg);
+  }
+}
+
+/* Efecto de parpadeo de bordes increíble */
+@keyframes border-flicker {
+  0%, 100% {
+    border-color: rgba(138, 43, 226, 0.4);
+    box-shadow: 
+      0 0 10px rgba(138, 43, 226, 0.3),
+      inset 0 0 10px rgba(138, 43, 226, 0.1);
+  }
+  25% {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 
+      0 0 15px rgba(99, 102, 241, 0.4),
+      inset 0 0 15px rgba(99, 102, 241, 0.15);
+  }
+  50% {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.5),
+      inset 0 0 20px rgba(59, 130, 246, 0.2);
+  }
+  75% {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 
+      0 0 15px rgba(99, 102, 241, 0.4),
+      inset 0 0 15px rgba(99, 102, 241, 0.15);
+  }
+}
+
+/* ===== CONTENEDOR DE ESTADÍSTICAS ===== */
+
+.neural-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.neural-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(138, 43, 226, 0.4) 15%,
+    rgba(99, 102, 241, 0.6) 35%,
+    rgba(59, 130, 246, 0.8) 50%,
+    rgba(99, 102, 241, 0.6) 65%,
+    rgba(138, 43, 226, 0.4) 85%,
+    transparent 100%
+  );
+  animation: stats-glow-pulse 4s ease-in-out infinite;
+}
+
+/* ===== ITEM DE ESTADÍSTICA ===== */
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  position: relative;
+  
+  /* Fondo glassmorphism increíble */
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0.08) 0%,
+    rgba(99, 102, 241, 0.12) 30%,
+    rgba(59, 130, 246, 0.1) 60%,
+    rgba(139, 92, 246, 0.06) 100%
+  );
+  
+  /* Bordes con resplandor */
+  border: 2px solid rgba(138, 43, 226, 0.4);
+  backdrop-filter: blur(15px);
+  
+  /* Animaciones increíbles */
+  animation: 
+    stats-energy-wave 6s ease-in-out infinite,
+    stats-float 10s ease-in-out infinite,
+    border-flicker 5s ease-in-out infinite;
+  
+  /* Transiciones suaves */
+  transition: all 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(138, 43, 226, 0.15) 0%,
+    rgba(99, 102, 241, 0.1) 30%,
+    rgba(59, 130, 246, 0.08) 50%,
+    transparent 70%
+  );
+  animation: stats-float 15s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(138, 43, 226, 0.2),
+    rgba(99, 102, 241, 0.25),
+    rgba(59, 130, 246, 0.2),
+    rgba(139, 92, 246, 0.15),
+    rgba(138, 43, 226, 0.2)
+  );
+  background-size: 400% 400%;
+  animation: stats-glow-pulse 8s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== VALOR DE LA ESTADÍSTICA ===== */
+
+.stat-value {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  
+  /* Efectos de neón increíbles */
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.8),
+    0 0 8px var(--stats-neon-color-1),
+    0 0 16px var(--stats-neon-color-1),
+    0 0 24px var(--stats-neon-color-2),
+    0 0 32px var(--stats-neon-color-3);
+  
+  /* Animaciones increíbles del texto */
+  animation: 
+    stats-glow-pulse 6s ease-in-out infinite,
+    stats-pulse-subtle 3s ease-in-out infinite alternate;
+  
+  /* Gradiente en el texto */
+  background: linear-gradient(
+    45deg,
+    #8A2BE2,
+    #6366F1,
+    #3B82F6,
+    #8A2BE2
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: stats-glow-pulse 8s ease-in-out infinite;
+}
+
+/* ===== ETIQUETA DE LA ESTADÍSTICA ===== */
+
+.stat-label {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  
+  /* Resplandor increíble */
+  text-shadow:
+    0 0 4px rgba(138, 43, 226, 0.4),
+    0 0 8px rgba(138, 43, 226, 0.3),
+    0 0 12px rgba(138, 43, 226, 0.2);
+  
+  /* Transición suave */
+  transition: all 0.3s ease;
+}
+
+/* ===== EFECTOS HOVER ===== */
+
+.stat-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  
+  border-color: rgba(138, 43, 226, 0.8);
+  
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0.15) 0%,
+    rgba(99, 102, 241, 0.18) 30%,
+    rgba(59, 130, 246, 0.15) 60%,
+    rgba(139, 92, 246, 0.12) 100%
+  );
+  
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(138, 43, 226, 0.5),
+    0 0 50px rgba(99, 102, 241, 0.3),
+    0 0 75px rgba(59, 130, 246, 0.2);
+}
+
+.stat-item:hover::after {
+  opacity: 0.7;
+}
+
+.stat-item:hover .stat-value {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 1),
+    0 0 12px var(--stats-neon-color-1),
+    0 0 24px var(--stats-neon-color-1),
+    0 0 36px var(--stats-neon-color-2),
+    0 0 48px var(--stats-neon-color-3);
+  
+  transform: scale(1.08);
+}
+
+.stat-item:hover .stat-label {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(138, 43, 226, 0.6),
+    0 0 12px rgba(138, 43, 226, 0.4),
+    0 0 18px rgba(138, 43, 226, 0.3);
+}
+
+/* ===== COLORES ESPECÍFICOS POR ESTADÍSTICA ===== */
+
+.stat-item:nth-child(1) {
+  --stats-neon-color-1: #8A2BE2;
+  --stats-neon-color-2: #9333EA;
+  --stats-neon-color-3: #7C3AED;
+}
+
+.stat-item:nth-child(2) {
+  --stats-neon-color-1: #6366F1;
+  --stats-neon-color-2: #4F46E5;
+  --stats-neon-color-3: #5B21B6;
+  animation-delay: -1.5s;
+}
+
+.stat-item:nth-child(3) {
+  --stats-neon-color-1: #3B82F6;
+  --stats-neon-color-2: #2563EB;
+  --stats-neon-color-3: #1D4ED8;
+  animation-delay: -3s;
+}
+
+.stat-item:nth-child(4) {
+  --stats-neon-color-1: #8B5CF6;
+  --stats-neon-color-2: #7C3AED;
+  --stats-neon-color-3: #6D28D9;
+  animation-delay: -4.5s;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .neural-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .stat-item {
+    padding: 1rem 1.5rem;
+    min-width: 150px;
+  }
+  
+  .stat-value {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+  
+  .stat-label {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@media (max-width: 480px) {
+  .neural-stats {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .stat-item {
+    padding: 0.75rem 1rem;
+    min-width: 120px;
+  }
+  
+  .stat-item::before,
+  .stat-item::after {
+    display: none; /* Simplificar en móviles */
+  }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-item {
+    animation: none;
+  }
+  
+  .stat-value {
+    animation: none;
+  }
+  
+  .stat-item:hover {
+    transform: none;
+  }
+  
+  .stat-item::before,
+  .stat-item::after {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .stat-item {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #fff;
+  }
+  
+  .stat-value {
+    color: #fff;
+    text-shadow: none;
+    background: none;
+    -webkit-text-fill-color: #fff;
+  }
+  
+  .stat-label {
+    color: #fff;
+    text-shadow: none;
+  }
+} 

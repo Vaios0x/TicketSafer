@@ -1,0 +1,262 @@
+// ========================================
+// VARIABLES GLOBALES SCSS - TICKETSAFER
+// ========================================
+
+// ========================================
+// COLORES PRINCIPALES
+// ========================================
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$primary-color: #667eea;
+$primary-color-light: #8b9fff;
+$primary-color-dark: #4c63d2;
+
+$secondary-color: #764ba2;
+$secondary-color-light: #9068c5;
+$secondary-color-dark: #5d3a7f;
+
+// ========================================
+// COLORES DE ESTADO
+// ========================================
+$success-color: #22c55e;
+$success-color-light: #4ade80;
+$success-color-dark: #16a34a;
+
+$warning-color: #f59e0b;
+$warning-color-light: #fbbf24;
+$warning-color-dark: #d97706;
+
+$error-color: #ef4444;
+$error-color-light: #f87171;
+$error-color-dark: #dc2626;
+
+$info-color: #3b82f6;
+$info-color-light: #60a5fa;
+$info-color-dark: #2563eb;
+
+// ========================================
+// COLORES NEUTROS
+// ========================================
+$dark-bg: #0f172a;
+$dark-bg-light: #1e293b;
+$dark-bg-lighter: #334155;
+
+$white: #ffffff;
+$white-90: rgba(255, 255, 255, 0.9);
+$white-80: rgba(255, 255, 255, 0.8);
+$white-70: rgba(255, 255, 255, 0.7);
+$white-60: rgba(255, 255, 255, 0.6);
+$white-50: rgba(255, 255, 255, 0.5);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-30: rgba(255, 255, 255, 0.3);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-10: rgba(255, 255, 255, 0.1);
+$white-05: rgba(255, 255, 255, 0.05);
+$white-03: rgba(255, 255, 255, 0.03);
+
+// ========================================
+// TIPOGRAFÍA
+// ========================================
+$font-family-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+// Tamaños de fuente
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+$font-size-6xl: 3.75rem;   // 60px
+
+// Pesos de fuente
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+// Alturas de línea
+$line-height-none: 1;
+$line-height-tight: 1.25;
+$line-height-snug: 1.375;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
+$line-height-loose: 2;
+
+// ========================================
+// ESPACIADO
+// ========================================
+$spacing-0: 0;
+$spacing-1: 0.25rem;  // 4px
+$spacing-2: 0.5rem;   // 8px
+$spacing-3: 0.75rem;  // 12px
+$spacing-4: 1rem;     // 16px
+$spacing-5: 1.25rem;  // 20px
+$spacing-6: 1.5rem;   // 24px
+$spacing-8: 2rem;     // 32px
+$spacing-10: 2.5rem;  // 40px
+$spacing-12: 3rem;    // 48px
+$spacing-16: 4rem;    // 64px
+$spacing-20: 5rem;    // 80px
+$spacing-24: 6rem;    // 96px
+$spacing-32: 8rem;    // 128px
+
+// ========================================
+// BORDES Y RADIOS
+// ========================================
+$border-radius-none: 0;
+$border-radius-sm: 0.25rem;   // 4px
+$border-radius-base: 0.5rem;  // 8px
+$border-radius-md: 0.75rem;   // 12px
+$border-radius-lg: 1rem;      // 16px
+$border-radius-xl: 1.25rem;   // 20px
+$border-radius-2xl: 1.5rem;   // 24px
+$border-radius-full: 9999px;
+
+$border-width-0: 0;
+$border-width-1: 1px;
+$border-width-2: 2px;
+$border-width-4: 4px;
+
+// ========================================
+// SOMBRAS
+// ========================================
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow-none: none;
+
+// Sombras específicas para efectos glassmorphism
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+$glass-shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.2);
+$glass-shadow-neon: 0 0 20px rgba(102, 126, 234, 0.3);
+
+// ========================================
+// TRANSICIONES
+// ========================================
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+$transition-all: all 0.3s ease;
+$transition-colors: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+$transition-opacity: opacity 0.3s ease;
+$transition-transform: transform 0.3s ease;
+
+$easing-linear: linear;
+$easing-ease: ease;
+$easing-ease-in: ease-in;
+$easing-ease-out: ease-out;
+$easing-ease-in-out: ease-in-out;
+$easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$easing-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ========================================
+// BREAKPOINTS RESPONSIVOS
+// ========================================
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// ========================================
+// Z-INDEX
+// ========================================
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+$z-index-toast: 1080;
+
+// ========================================
+// EFECTOS ESPECÍFICOS
+// ========================================
+$backdrop-blur-sm: blur(4px);
+$backdrop-blur-base: blur(8px);
+$backdrop-blur-md: blur(12px);
+$backdrop-blur-lg: blur(16px);
+$backdrop-blur-xl: blur(24px);
+
+// Gradientes adicionales
+$gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-blue: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+$gradient-green: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+$gradient-orange: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+$gradient-red: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+
+// ========================================
+// MIXINS ÚTILES
+// ========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin glass-effect($opacity: 0.1) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: $backdrop-blur-md;
+  -webkit-backdrop-filter: $backdrop-blur-md;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin button-hover-effect {
+  transition: $transition-all;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin text-gradient($gradient: $primary-gradient) {
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) { @content; }
+  }
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+  @if $breakpoint == 2xl {
+    @media (min-width: $breakpoint-2xl) { @content; }
+  }
+} 

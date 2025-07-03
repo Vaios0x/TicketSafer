@@ -1,0 +1,187 @@
+.neural-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.neural-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(102, 126, 234, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(240, 147, 251, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(79, 172, 254, 0.2), transparent);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: neuralParticleFloat 25s linear infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.neural-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.neural-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.neural-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #c084fc, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.neural-hero-subtitle {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+.neural-hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.neural-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.neural-button.primary {
+  background: var(--neural-gradient-ticket);
+  color: white;
+}
+
+.neural-button.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.neural-button:hover .button-glow {
+  left: 100%;
+}
+
+.neural-button:hover {
+  transform: translateY(-2px);
+}
+
+.neural-button.primary:hover {
+  box-shadow: var(--neural-glow-blue);
+}
+
+.neural-button.secondary:hover {
+  box-shadow: var(--neural-glow-purple);
+  border-color: var(--neural-accent);
+}
+
+.neural-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #0ea5e9, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .neural-hero-title {
+    font-size: 3rem;
+  }
+
+  .neural-hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .neural-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .neural-hero-title {
+    font-size: 2rem;
+  }
+
+  .neural-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .neural-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+} 

@@ -1,0 +1,215 @@
+.neural-about {
+  min-height: 100vh;
+  background: var(--neural-bg-primary);
+  color: var(--neural-text-primary);
+  overflow: hidden;
+}
+
+.neural-about-hero {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 11, 30, 0.8) 0%,
+    var(--neural-bg-primary) 100%
+  );
+  text-align: center;
+  overflow: hidden;
+}
+
+.neural-about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(102, 126, 234, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(240, 147, 251, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(79, 172, 254, 0.2), transparent);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: particles 4s linear infinite;
+}
+
+.neural-about-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.neural-about-hero p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.neural-about-features {
+  padding: 6rem 2rem;
+}
+
+.neural-about-features h2,
+.neural-about-stats h2,
+.neural-about-mission h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #a855f7;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.neural-about-stats {
+  padding: 6rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card h4 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.neural-about-mission {
+  padding: 6rem 2rem;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
+
+@media (max-width: 768px) {
+  .neural-about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .neural-about-hero p {
+    font-size: 1rem;
+  }
+  
+  .neural-about-features h2,
+  .neural-about-stats h2,
+  .neural-about-mission h2 {
+    font-size: 2rem;
+  }
+  
+  .feature-card,
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .neural-about-hero {
+    padding: 6rem 1rem;
+  }
+  
+  .neural-about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .features-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+} 

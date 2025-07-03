@@ -1,0 +1,489 @@
+/* ========================================
+   CUSTOM CONNECT BUTTON STYLES
+   ======================================== */
+
+/* Botón de conexión principal */
+.custom-connect-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 25px rgba(102, 126, 234, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  min-width: 220px;
+}
+
+.custom-connect-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 35px rgba(102, 126, 234, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-connect-btn:active {
+  transform: translateY(0);
+}
+
+/* Glow effect */
+.connect-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-connect-btn:hover .connect-glow {
+  opacity: 1;
+}
+
+/* Icono de conexión */
+.connect-icon {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.connect-text {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Estado de error */
+.custom-connect-btn.error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.custom-connect-btn.error:hover {
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+.error-icon {
+  font-size: 1.25rem;
+}
+
+/* Container para wallet conectada */
+.connected-wallet-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Botón de chain */
+.chain-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 16px;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+  min-width: 200px;
+}
+
+.chain-button:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+}
+
+.chain-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chain-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chain-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.chain-icon-fallback {
+  font-size: 1rem;
+  color: #667eea;
+}
+
+.chain-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dropdown-icon {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.chain-button:hover .dropdown-icon,
+.account-button:hover .dropdown-icon {
+  transform: translateY(1px);
+}
+
+/* Botón de account */
+.account-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.account-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.account-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+}
+
+.account-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.account-balance {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  line-height: 1;
+}
+
+/* ========================================
+   WALLET INFO PANEL STYLES
+   ======================================== */
+
+.wallet-info-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.wallet-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wallet-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar-image-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder-large {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.wallet-details {
+  flex: 1;
+}
+
+.wallet-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wallet-address {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* Acciones de wallet */
+.wallet-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.wallet-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wallet-action-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.wallet-action-btn:active {
+  transform: translateY(0);
+}
+
+/* Sección de balance */
+.wallet-balance-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.balance-label {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.balance-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .connected-wallet-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .chain-button,
+  .account-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .account-button {
+    min-width: auto;
+  }
+
+  .wallet-actions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .wallet-info-panel {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .custom-connect-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wallet-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .wallet-name {
+    font-size: 1.125rem;
+  }
+
+  .balance-amount {
+    font-size: 1.25rem;
+  }
+
+  .custom-connect-btn {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   ANIMATIONS Y EFFECTS
+   ======================================== */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.custom-connect-btn.loading {
+  animation: pulse 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.wallet-action-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: light) {
+  .custom-connect-btn {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  }
+
+  .chain-button,
+  .account-button {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.2);
+    color: #1a1b2e;
+  }
+
+  .wallet-info-panel {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1b2e;
+    border-color: rgba(102, 126, 234, 0.2);
+  }
+
+  .wallet-address {
+    opacity: 0.6;
+  }
+
+  .balance-label {
+    opacity: 0.6;
+  }
+} 

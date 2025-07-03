@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- Configuración de viewport optimizada -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Favicon optimizado para PWA -->
+    <link rel="icon" type="image/svg+xml" href="/ticket.svg" />
+    <link rel="apple-touch-icon" href="/ticket.svg" />
+    
+    <!-- Meta tags SEO -->
+    <title>TicketSafer - NFT Tickets Multichain Platform</title>
+    <meta name="description" content="La primera plataforma multichain de tickets NFT. Compra, vende y gestiona tus tickets de forma segura en Ethereum, Polygon, Arbitrum y Optimism." />
+    <meta name="keywords" content="NFT, tickets, blockchain, ethereum, polygon, arbitrum, optimism, eventos, conciertos" />
+    <meta name="author" content="TicketSafer Team" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ticketsafer.com/" />
+    <meta property="og:title" content="TicketSafer - NFT Tickets Multichain Platform" />
+    <meta property="og:description" content="La primera plataforma multichain de tickets NFT" />
+    <meta property="og:image" content="/ticket.svg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ticketsafer.com/" />
+    <meta property="twitter:title" content="TicketSafer - NFT Tickets Multichain Platform" />
+    <meta property="twitter:description" content="La primera plataforma multichain de tickets NFT" />
+    <meta property="twitter:image" content="/ticket.svg" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#667eea" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TicketSafer" />
+    
+    <!-- Preconnect para optimizar carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preconnect para servicios externos -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    
+    <!-- Fuentes optimizadas con font-display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Preload crítico CSS si es necesario -->
+    <style>
+      /* Critical CSS inline para evitar FOUC */
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner */
+      .loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+        z-index: 9999;
+      }
+      
+      @keyframes spin {
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading indicator inicial -->
+    <div id="initial-loader" class="loading-spinner"></div>
+    
+    <!-- Contenedor principal de la aplicación -->
+    <div id="root"></div>
+    
+    <!-- Scripts Vite optimizados -->
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Script para ocultar loader cuando React se monta -->
+    <script>
+      // Ocultar loader cuando la app se carga
+      window.addEventListener('load', function() {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          setTimeout(() => loader.remove(), 300);
+        }
+      });
+    </script>
+    
+    <!-- No-JS fallback -->
+    <noscript>
+      <div style="text-align: center; padding: 50px; color: white;">
+        <h1>TicketSafer</h1>
+        <p>Esta aplicación requiere JavaScript para funcionar correctamente.</p>
+        <p>Por favor, habilita JavaScript en tu navegador.</p>
+      </div>
+    </noscript>
+  </body>
+</html>

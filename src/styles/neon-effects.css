@@ -1,0 +1,412 @@
+/* ===== EFECTOS DE NEÓN MODERNOS 2025 ===== */
+
+/* Propiedades CSS tipadas para animaciones de color */
+@property --neon-color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #8A2BE2;
+}
+
+@property --neon-color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #6366F1;
+}
+
+@property --neon-color-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FFFFFF;
+}
+
+/* Animaciones de color para efectos dinámicos */
+@keyframes neon-color-cycle {
+  0% {
+    --neon-color-1: #8A2BE2;
+    --neon-color-2: #6366F1;
+    --neon-color-3: #FFFFFF;
+  }
+  33% {
+    --neon-color-1: #9333EA;
+    --neon-color-2: #3B82F6;
+    --neon-color-3: #F8FAFC;
+  }
+  66% {
+    --neon-color-1: #7C3AED;
+    --neon-color-2: #1D4ED8;
+    --neon-color-3: #E2E8F0;
+  }
+  100% {
+    --neon-color-1: #8A2BE2;
+    --neon-color-2: #6366F1;
+    --neon-color-3: #FFFFFF;
+  }
+}
+
+/* Efecto de parpadeo realista */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px var(--neon-color-1),
+      0 0 80px var(--neon-color-1),
+      0 0 90px var(--neon-color-1),
+      0 0 100px var(--neon-color-1),
+      0 0 150px var(--neon-color-1);
+    opacity: 1;
+  }
+  20%, 24%, 55% {       
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff;
+    opacity: 0.8;
+  }
+}
+
+/* Efecto de pulsación suave */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 20px var(--neon-color-1),
+      0 0 35px var(--neon-color-1),
+      0 0 45px var(--neon-color-1),
+      0 0 55px var(--neon-color-1),
+      0 0 75px var(--neon-color-1);
+  }
+  50% {
+    text-shadow:
+      0 0 1px #fff,
+      0 0 4px #fff,
+      0 0 8px #fff,
+      0 0 15px var(--neon-color-1),
+      0 0 25px var(--neon-color-1),
+      0 0 35px var(--neon-color-1),
+      0 0 45px var(--neon-color-1),
+      0 0 55px var(--neon-color-1);
+  }
+}
+
+/* Efecto de brillo ondulante */
+@keyframes neon-wave {
+  0%, 100% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 20px var(--neon-color-1),
+      0 0 35px var(--neon-color-2),
+      0 0 45px var(--neon-color-3),
+      0 0 55px var(--neon-color-1),
+      0 0 75px var(--neon-color-2);
+  }
+  25% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 20px var(--neon-color-2),
+      0 0 35px var(--neon-color-3),
+      0 0 45px var(--neon-color-1),
+      0 0 55px var(--neon-color-2),
+      0 0 75px var(--neon-color-3);
+  }
+  50% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 20px var(--neon-color-3),
+      0 0 35px var(--neon-color-1),
+      0 0 45px var(--neon-color-2),
+      0 0 55px var(--neon-color-3),
+      0 0 75px var(--neon-color-1);
+  }
+  75% {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 12px #fff,
+      0 0 20px var(--neon-color-1),
+      0 0 35px var(--neon-color-3),
+      0 0 45px var(--neon-color-2),
+      0 0 55px var(--neon-color-1),
+      0 0 75px var(--neon-color-3);
+  }
+}
+
+/* ===== TÍTULO HERO CON EFECTOS INTERACTIVOS ===== */
+
+.neon-hero-title {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  
+  /* Efecto base de neón más sutil */
+  text-shadow:
+    0 0 2px #fff,
+    0 0 6px #fff,
+    0 0 12px #fff,
+    0 0 20px var(--neon-color-1),
+    0 0 35px var(--neon-color-1),
+    0 0 45px var(--neon-color-1),
+    0 0 55px var(--neon-color-1),
+    0 0 75px var(--neon-color-1);
+  
+  /* Animaciones por defecto */
+  animation: 
+    neon-color-cycle 10s ease-in-out infinite,
+    neon-pulse 3s ease-in-out infinite alternate;
+  
+  /* Transición suave para interacciones */
+  transition: all 0.3s ease;
+}
+
+.neon-hero-title:hover {
+  transform: scale(1.02);
+  animation: 
+    neon-color-cycle 5s ease-in-out infinite,
+    neon-wave 2s ease-in-out infinite;
+  
+  text-shadow:
+    0 0 3px #fff,
+    0 0 8px #fff,
+    0 0 15px #fff,
+    0 0 25px var(--neon-color-1),
+    0 0 45px var(--neon-color-1),
+    0 0 60px var(--neon-color-1),
+    0 0 75px var(--neon-color-1),
+    0 0 95px var(--neon-color-1);
+}
+
+.neon-hero-title:active {
+  transform: scale(0.98);
+  animation: 
+    neon-color-cycle 2s ease-in-out infinite,
+    neon-flicker 0.5s linear 3;
+}
+
+/* ===== ACCESIBILIDAD Y RESPONSIVE ===== */
+
+/* Respetar preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .neon-hero-title {
+    animation: none;
+    
+    /* Mantener solo el efecto estático */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #00D4FF,
+      0 0 80px #00D4FF,
+      0 0 90px #00D4FF,
+      0 0 100px #00D4FF,
+      0 0 150px #8A2BE2;
+  }
+  
+  .neon-hero-title:hover {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .neon-hero-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    
+    /* Reducir intensidad del brillo en móviles para mejor rendimiento */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 6px #fff,
+      0 0 10px #fff,
+      0 0 20px var(--neon-color-1),
+      0 0 40px var(--neon-color-1),
+      0 0 50px var(--neon-color-1),
+      0 0 60px var(--neon-color-1),
+      0 0 80px var(--neon-color-1);
+  }
+  
+  .neon-hero-title:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Modo de alto contraste */
+@media (prefers-contrast: high) {
+  .neon-hero-title {
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #8A2BE2;
+  }
+}
+
+/* ===== VARIANTES DE INTENSIDAD ===== */
+
+.neon-subtle {
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 8px var(--neon-color-1),
+    0 0 16px var(--neon-color-1),
+    0 0 24px var(--neon-color-1);
+}
+
+.neon-medium {
+  text-shadow:
+    0 0 4px #fff,
+    0 0 8px #fff,
+    0 0 16px #fff,
+    0 0 32px var(--neon-color-1),
+    0 0 64px var(--neon-color-1),
+    0 0 80px var(--neon-color-1);
+}
+
+.neon-intense {
+  text-shadow:
+    0 0 6px #fff,
+    0 0 15px #fff,
+    0 0 25px #fff,
+    0 0 50px var(--neon-color-1),
+    0 0 100px var(--neon-color-1),
+    0 0 120px var(--neon-color-1),
+    0 0 140px var(--neon-color-1),
+    0 0 200px var(--neon-color-1),
+    0 0 250px var(--neon-color-1);
+}
+
+/* ===== CLASES DE EFECTOS DE NEÓN ===== */
+
+/* Efecto base de neón */
+.neon-text-base {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--neon-color-1),
+    0 0 80px var(--neon-color-1),
+    0 0 90px var(--neon-color-1),
+    0 0 100px var(--neon-color-1),
+    0 0 150px var(--neon-color-1);
+  
+  /* Animación de colores de fondo */
+  animation: neon-color-cycle 8s ease-in-out infinite;
+}
+
+/* Efecto de neón con parpadeo */
+.neon-text-flicker {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--neon-color-1),
+    0 0 80px var(--neon-color-1),
+    0 0 90px var(--neon-color-1),
+    0 0 100px var(--neon-color-1),
+    0 0 150px var(--neon-color-1);
+  animation: 
+    neon-color-cycle 8s ease-in-out infinite,
+    neon-flicker 3s linear infinite;
+}
+
+/* Efecto de neón con pulsación */
+.neon-text-pulse {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--neon-color-1),
+    0 0 80px var(--neon-color-1),
+    0 0 90px var(--neon-color-1),
+    0 0 100px var(--neon-color-1),
+    0 0 150px var(--neon-color-1);
+  animation: 
+    neon-color-cycle 8s ease-in-out infinite,
+    neon-pulse 2s ease-in-out infinite alternate;
+}
+
+/* Efecto de neón ondulante (el más espectacular) */
+.neon-text-wave {
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px var(--neon-color-1),
+    0 0 80px var(--neon-color-1),
+    0 0 90px var(--neon-color-1),
+    0 0 100px var(--neon-color-1),
+    0 0 150px var(--neon-color-1);
+  animation: 
+    neon-color-cycle 12s ease-in-out infinite,
+    neon-wave 4s ease-in-out infinite;
+}
+
+/* ===== EFECTOS ADICIONALES PARA PALABRAS ESPECÍFICAS ===== */
+
+/* Resaltar palabras clave con diferentes colores */
+.neon-highlight-word {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-highlight-word.highlight-multichain {
+  --neon-color-1: #8A2BE2;
+  --neon-color-2: #6366F1;
+  --neon-color-3: #FFFFFF;
+}
+
+.neon-highlight-word.highlight-nft {
+  --neon-color-1: #9333EA;
+  --neon-color-2: #3B82F6;
+  --neon-color-3: #F8FAFC;
+}
+
+.neon-highlight-word.highlight-tickets {
+  --neon-color-1: #7C3AED;
+  --neon-color-2: #1D4ED8;
+  --neon-color-3: #E2E8F0;
+}
+
+/* ===== EFECTOS ESPECIALES PARA LETRAS INDIVIDUALES ===== */
+
+/* Para aplicar a spans individuales dentro del título */
+.neon-letter {
+  display: inline-block;
+  transition: all 0.3s ease;
+  animation-delay: calc(var(--letter-index, 0) * 0.1s);
+}
+
+.neon-letter:hover {
+  transform: translateY(-5px) scale(1.1);
+  text-shadow:
+    0 0 8px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 60px var(--neon-color-1),
+    0 0 120px var(--neon-color-1),
+    0 0 150px var(--neon-color-1),
+    0 0 180px var(--neon-color-1),
+    0 0 250px var(--neon-color-1);
+} 

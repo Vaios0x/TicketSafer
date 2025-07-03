@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores Base Neural para Tickets */
+  --neural-primary: #667eea;
+  --neural-secondary: #764ba2;
+  --neural-accent: #f093fb;
+  --neural-highlight: #22d3ee;
+  
+  /* Gradientes Neural */
+  --neural-gradient-main: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --neural-gradient-ticket: linear-gradient(45deg, #4facfe, #00f2fe);
+  --neural-gradient-event: linear-gradient(45deg, #f093fb, #f5576c);
+  --neural-gradient-success: linear-gradient(45deg, #10b981, #34d399);
+  
+  /* Fondos Neural */
+  --neural-bg-primary: linear-gradient(135deg, #16213e 0%, #0f0f23 100%);
+  --neural-bg-secondary: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  --neural-bg-card: rgba(255, 255, 255, 0.05);
+  --neural-bg-glass: rgba(255, 255, 255, 0.08);
+  
+  /* Efectos de Brillo Neural */
+  --neural-glow-blue: 0 0 30px rgba(102, 126, 234, 0.3);
+  --neural-glow-purple: 0 0 30px rgba(118, 75, 162, 0.3);
+  --neural-glow-pink: 0 0 30px rgba(240, 147, 251, 0.3);
+  --neural-glow-cyan: 0 0 30px rgba(34, 211, 238, 0.3);
+}
+
+/* Animaciones Neural */
+@keyframes neuralPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes neuralGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neuralScan {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes neuralParticleFloat {
+  0% { background-position: 0 0; }
+  100% { background-position: 150px 150px; }
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--neural-bg-primary);
+  color: white;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Estilos Base Neural */
+.neural-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedores Neural */
+.neural-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tarjetas Neural */
+.neural-card {
+  background: var(--neural-bg-card);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.neural-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neural-glow-blue);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Texto con Gradiente Neural */
+.gradient-text-neural {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 900;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  animation: neuralGradientShift 8s ease infinite;
+}
+
+/* Botones Neural */
+.neural-btn {
+  background: var(--neural-gradient-main);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.neural-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.neural-btn:hover::before {
+  left: 100%;
+}
+
+.neural-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neural-glow-purple);
+}
+
+/* Efectos de Cristal */
+.neural-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+}
+
+/* Campo de Partículas */
+.particle-field-neural {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-field-neural::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(102, 126, 234, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(240, 147, 251, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(79, 172, 254, 0.2), transparent);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: neuralParticleFloat 25s linear infinite;
+  pointer-events: none;
+}
+
+/* Línea de Escaneo AI */
+.ai-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--neural-primary) 30%, 
+    var(--neural-accent) 50%, 
+    var(--neural-secondary) 70%, 
+    transparent 100%
+  );
+  animation: neuralScan 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .neural-container {
+    padding: 1rem;
+  }
+  
+  .gradient-text-neural {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .neural-card {
+    padding: 1.5rem;
+  }
+  
+  .neural-btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* IMPORT CRÍTICO PARA TÍTULOS DE EVENTOS */
+@import './styles/event-titles-override.css';
+
+/* =================================================
+   IMPORTACIONES DE ESTILOS MODERNOS 2025
+   ================================================= */
+
+/* Event Card Styles */
+@import './styles/event-card.css';
+
+/* Events Page Styles */
+@import './styles/events-page.css';
+
+/* Events Grid Styles */
+@import './styles/events-grid.css';
+
+/* Sobrescribir cualquier estilo anterior que pueda causar conflictos */
+.events-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 24px !important;
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+  padding: 32px 20px !important;
+}
+
+.event-card {
+  min-height: 380px !important;
+  max-height: 420px !important;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(30, 41, 59, 0.9) 100%) !important;
+}
+
+.event-image-container {
+  height: 100px !important;
+}
+
+/* RESPONSIVE GRID FORZADO */
+@media (max-width: 1400px) {
+  .events-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

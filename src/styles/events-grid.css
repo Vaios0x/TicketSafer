@@ -1,0 +1,793 @@
+/* ============================================
+   MODERN EVENTS GRID 2025 - LAYOUT CORREGIDO
+   ============================================ */
+
+/* GRID PRINCIPAL */
+.events-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  max-width: 1800px !important;
+  margin: 0 auto !important;
+  padding: 20px !important;
+  background: transparent !important;
+  align-items: start !important;
+}
+
+/* CONTENEDOR DE EVENTOS */
+.events-container {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+/* ASEGURAR QUE LOS CARDS MANTENGAN SU ALTURA */
+.events-grid .event-card {
+  height: auto !important;
+  min-height: 480px !important;
+  max-height: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* RESPONSIVE BREAKPOINTS MEJORADOS */
+@media (max-width: 1400px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 14px !important;
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 12px !important;
+  }
+  
+  .events-grid .event-card {
+    min-height: 380px !important;
+  }
+}
+
+/* PANTALLAS ULTRA GRANDES */
+@media (min-width: 1600px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+    gap: 28px !important;
+    padding: 40px 32px !important;
+    max-width: 1800px !important;
+  }
+  
+  .events-container {
+    padding: 60px 40px !important;
+  }
+}
+
+/* PAGINACIÓN MEJORADA 2024 */
+.pagination-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 32px auto;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.pagination-info {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-btn,
+.pagination-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 16px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination-btn {
+  gap: 8px;
+}
+
+.pagination-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.pagination-btn:hover:not(.disabled) svg {
+  transform: scale(1.1);
+}
+
+.pagination-btn:hover:not(.disabled),
+.pagination-number:hover:not(.dots):not(.active) {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.pagination-btn:active:not(.disabled),
+.pagination-number:active:not(.dots):not(.active) {
+  transform: translateY(1px);
+}
+
+.pagination-number.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.pagination-number.dots {
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+  padding: 0 8px;
+}
+
+.pagination-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(30, 41, 59, 0.3);
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.pagination-btn:not(.disabled):hover,
+.pagination-number:not(.dots):not(.active):hover {
+  animation: pulse 1s infinite;
+}
+
+/* Loading State */
+.pagination-loading .pagination-btn,
+.pagination-loading .pagination-number {
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination-loading .pagination-btn::after,
+.pagination-loading .pagination-number::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.2),
+    transparent
+  );
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination-container {
+    margin: 24px auto;
+    padding: 20px;
+  }
+  
+  .pagination-info {
+    font-size: 0.85rem;
+  }
+  
+  .pagination-btn,
+  .pagination-number {
+    min-width: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+  
+  .pagination-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-container {
+    margin: 16px auto;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .pagination-controls {
+    gap: 8px;
+  }
+  
+  .pagination-btn,
+  .pagination-number {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
+  
+  .pagination-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .pagination-numbers {
+    gap: 4px;
+  }
+}
+
+/* LOADING STATE */
+.events-grid.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.skeleton-card {
+  height: 420px;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.05) 25%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0.05) 75%);
+  background-size: 200% 100%;
+  border-radius: 16px;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* NO RESULTS */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+  grid-column: 1 / -1;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.no-results p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* SOBRESCRIBIR CUALQUIER ESTILO CONFLICTIVO */
+.events-grid > * {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* ELIMINAR CUALQUIER FLOAT O POSICIONAMIENTO EXTRAÑO */
+.events-grid .event-card {
+  float: none !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+/* ASEGURAR QUE EL CONTENIDO NO SE DESBORDE */
+.events-grid .event-card * {
+  box-sizing: border-box !important;
+}
+
+/* ===== TÍTULOS DE EVENTOS CON GRADIENTE DEL LOGO - TAMAÑO OPTIMIZADO ===== */
+
+/* TÍTULOS PRINCIPALES CON GRADIENTE - VERSIÓN OPTIMIZADA */
+.events-grid .event-card h3,
+.events-grid .event-card .event-title,
+.events-grid .event-card .event-title-premium,
+.event-card h3,
+.event-card .event-title,
+.event-card .event-title-premium {
+  /* TAMAÑO OPTIMIZADO PARA GRID */
+  font-size: 28px !important;
+  font-weight: 300 !important;
+  
+  /* GRADIENTE DEL LOGO TICKETSAFER - VISIBLE POR DEFECTO */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  
+  /* ESPACIADO OPTIMIZADO */
+  line-height: 1.1 !important;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  
+  /* SIN SOMBRAS PARA GRADIENTE LIMPIO */
+  text-shadow: none !important;
+  
+  /* TIPOGRAFÍA ULTRA NÍTIDA */
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  letter-spacing: -0.01em !important;
+  
+  /* RENDERIZADO EXTREMO */
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  
+  /* SIN FILTROS PARA GRADIENTE PURO */
+  filter: none !important;
+  
+  /* LAYOUT CONTROLADO */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-height: 65px;
+  max-height: 65px;
+  
+  /* POSICIÓN Y TRANSICIÓN */
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* HOVER CON GRADIENTE ANIMADO */
+.events-grid .event-card:hover h3,
+.events-grid .event-card:hover .event-title,
+.events-grid .event-card:hover .event-title-premium,
+.event-card:hover h3,
+.event-card:hover .event-title,
+.event-card:hover .event-title-premium,
+.events-container .event-card:hover h3,
+.events-container .event-card:hover .event-title,
+.events-container .event-card:hover .event-title-premium,
+.events-grid-container .event-card:hover h3,
+.events-grid-container .event-card:hover .event-title,
+.events-grid-container .event-card:hover .event-title-premium,
+div[class*="event"]:hover h3,
+div[class*="event"]:hover .event-title,
+div[class*="event"]:hover .event-title-premium {
+  /* GRADIENTE ANIMADO EN HOVER */
+  background: linear-gradient(135deg, #7c8cfc 0%, #8b5fbf 30%, #ff6ec7 70%, #667eea 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  text-shadow: none !important;
+  transform: translateY(-1px);
+  filter: none !important;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+  .events-grid .event-card h3,
+  .events-grid .event-card .event-title,
+  .events-grid .event-card .event-title-premium,
+  .event-card h3,
+  .event-card .event-title,
+  .event-card .event-title-premium {
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    min-height: 55px !important;
+    max-height: 55px !important;
+    line-height: 1.1 !important;
+    margin: 0 0 14px 0 !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid .event-card h3,
+  .events-grid .event-card .event-title,
+  .events-grid .event-card .event-title-premium,
+  .event-card h3,
+  .event-card .event-title,
+  .event-card .event-title-premium {
+    font-size: 22px !important;
+    font-weight: 300 !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    margin: 0 0 12px 0 !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+}
+
+/* Animaciones de entrada */
+.pagination-container {
+  animation: pagination-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pagination-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efectos de hover mejorados */
+.pagination-btn:hover:not(.disabled),
+.pagination-number:hover:not(.dots):not(.active) {
+  backdrop-filter: blur(25px);
+}
+
+/* Indicador de carga para cambios de página */
+.pagination-loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.pagination-loading .pagination-btn,
+.pagination-loading .pagination-number {
+  animation: pagination-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pagination-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE PARA PAGINACIÓN */
+@media (max-width: 768px) {
+  .pagination-container {
+    padding: 15px;
+    margin: 15px auto;
+  }
+  
+  .pagination-info {
+    font-size: 0.8rem;
+  }
+  
+  .pagination-btn {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-container {
+    padding: 12px;
+    margin: 12px auto;
+  }
+  
+  .pagination-controls {
+    gap: 6px;
+  }
+  
+  .pagination-btn {
+    min-width: 32px;
+    height: 32px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .no-events {
+    padding: 3rem 1.5rem;
+  }
+  
+  .no-events h3 {
+    font-size: 1.25rem;
+  }
+  
+  .no-events p {
+    font-size: 0.9rem;
+  }
+}
+
+.events-grid-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+/* Loading State */
+.events-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 16px;
+  color: #94a3b8;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  border-top-color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* No Events Message */
+.no-events-message {
+  text-align: center;
+  padding: 48px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.no-events-message h3 {
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.no-events-message p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Pagination */
+.pagination-container {
+  width: 100%;
+  max-width: 1800px;
+  margin: 32px auto;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.pagination-info {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-number {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-number:hover:not(.active) {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.pagination-number.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-grid-container {
+    padding: 16px;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+
+  .pagination-container {
+    padding: 16px;
+    margin: 24px auto;
+  }
+
+  .pagination-controls {
+    gap: 8px;
+  }
+
+  .pagination-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid-container {
+    padding: 12px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pagination-container {
+    padding: 12px;
+    margin: 16px auto;
+  }
+
+  .pagination-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .pagination-numbers {
+    gap: 4px;
+  }
+
+  .pagination-number {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+} 

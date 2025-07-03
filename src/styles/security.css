@@ -1,0 +1,443 @@
+/* Security Page Styles */
+.security-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow-x: hidden;
+  padding: 6rem 0;
+}
+
+.security-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Security Tips Section */
+.security-tips {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.security-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.security-tip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+}
+
+.tip-icon {
+  color: #8b5cf6;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 50%;
+}
+
+.tip-content {
+  flex: 1;
+}
+
+.tip-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tip-description {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.critical-tag {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
+/* Security Audits Section */
+.security-audits {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.audit-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.audit-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+}
+
+.audit-check {
+  color: #22c55e;
+  font-size: 1.25rem;
+}
+
+.audit-text {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+/* Incident Response Section */
+.incident-response {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.response-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.response-item {
+  padding: 1.5rem;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+}
+
+.response-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.response-description {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Vulnerability Report Section */
+.vulnerability-report {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.report-header {
+  margin-bottom: 2rem;
+}
+
+.report-title {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.report-description {
+  color: #a0a0a0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.report-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.report-option {
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.report-option:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+}
+
+.report-option-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.report-option-icon {
+  color: #8b5cf6;
+  font-size: 1.5rem;
+}
+
+.report-option-email {
+  color: #8b5cf6;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.report-option-email:hover {
+  color: #9f7aea;
+  text-decoration: underline;
+}
+
+.report-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.report-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+}
+
+@media (max-width: 768px) {
+  .security-container {
+    padding: 0 1rem;
+  }
+
+  .security-tips,
+  .security-audits,
+  .incident-response {
+    padding: 1.5rem;
+  }
+
+  .security-tip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .tip-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .report-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .report-option {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .response-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Security Measures Section */
+.security-measures {
+  margin-bottom: 3rem;
+}
+
+.measures-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.measures-subtitle {
+  color: #a0a0a0;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.measures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.measure-card {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.measure-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+}
+
+.measure-icon {
+  color: #8b5cf6;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 50%;
+}
+
+.measure-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.measure-description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Best Practices Section */
+.security-best-practices {
+  background: rgba(13, 13, 34, 0.6);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.best-practices-header {
+  margin-bottom: 2rem;
+}
+
+.best-practices-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.best-practices-subtitle {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.best-practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.practice-item {
+  background: rgba(20, 20, 40, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  transition: all 0.3s ease;
+}
+
+.practice-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+}
+
+.practice-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.practice-icon {
+  color: #8b5cf6;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 12px;
+}
+
+.practice-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.practice-severity {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.severity-critical {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.practice-description {
+  color: #a0a0a0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+} 

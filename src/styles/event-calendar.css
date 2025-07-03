@@ -1,0 +1,511 @@
+/* ================================
+   EVENT CALENDAR STYLES 2025
+   ================================ */
+
+.event-calendar-container {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.calendar-title svg {
+  font-size: 1.75rem;
+  color: #818cf8;
+  filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.3));
+}
+
+.calendar-title h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(135deg, #818cf8, #c7d2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 0.75rem;
+  background: rgba(30, 41, 59, 0.4);
+  padding: 0.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 0.625rem 1.25rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-button[data-active="true"] {
+  background: rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.3);
+  color: #818cf8;
+  box-shadow: 0 0 12px rgba(129, 140, 248, 0.2);
+}
+
+.view-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para react-big-calendar */
+.rbc-calendar {
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 200px) !important;
+}
+
+.rbc-toolbar {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 1.25rem;
+  border: none;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-toolbar button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  border-radius: 10px;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.rbc-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.rbc-toolbar button.rbc-active {
+  background: rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.3);
+  color: #818cf8;
+  box-shadow: 0 0 12px rgba(129, 140, 248, 0.2);
+}
+
+.rbc-header {
+  background: rgba(30, 41, 59, 0.4);
+  padding: 1rem;
+  font-weight: 600;
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.rbc-today {
+  background: rgba(129, 140, 248, 0.1);
+}
+
+.rbc-off-range-bg {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.rbc-date-cell {
+  padding: 4px;
+  text-align: right;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.rbc-date-cell.rbc-now {
+  color: #818cf8;
+  font-weight: 600;
+}
+
+.rbc-row-segment {
+  padding: 0.25rem;
+}
+
+/* Estilos para los eventos */
+.rbc-event {
+  background: rgba(129, 140, 248, 0.15) !important;
+  border: 1px solid rgba(129, 140, 248, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  margin: 1px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.rbc-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(129, 140, 248, 0.2);
+  z-index: 1000;
+}
+
+.rbc-event.rbc-selected {
+  background: rgba(129, 140, 248, 0.25) !important;
+  box-shadow: 0 0 0 2px #818cf8 !important;
+}
+
+.rbc-event-content {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  white-space: normal !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  color: #ffffff !important;
+}
+
+.event-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #818cf8;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.event-time svg {
+  font-size: 0.7rem;
+}
+
+.event-title {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-details {
+  display: none;
+}
+
+.rbc-event:hover .event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  width: 200px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.2s ease;
+}
+
+.event-location, .event-price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.event-badge.featured {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+}
+
+.event-badge.resale {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+}
+
+.sold-out-badge {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-left: 4px;
+}
+
+.rbc-show-more {
+  font-size: 0.7rem !important;
+  padding: 2px 4px !important;
+  background: rgba(129, 140, 248, 0.1) !important;
+  color: #818cf8 !important;
+  border-radius: 4px !important;
+}
+
+/* Estilos para el popup de detalles */
+.event-popup {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+.event-popup-header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-popup-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.event-popup-datetime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #818cf8;
+  font-size: 0.85rem;
+}
+
+.event-popup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-popup-location,
+.event-popup-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.event-popup-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.event-popup-button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.event-popup-button.primary {
+  background: rgba(129, 140, 248, 0.2);
+  color: #818cf8;
+  border: 1px solid rgba(129, 140, 248, 0.4);
+}
+
+.event-popup-button.primary:hover {
+  background: rgba(129, 140, 248, 0.3);
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-calendar-container {
+    padding: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .rbc-calendar {
+    height: calc(100vh - 150px) !important;
+  }
+
+  .rbc-month-row {
+    min-height: 80px;
+  }
+
+  .event-content {
+    font-size: 0.7rem;
+  }
+}
+
+/* Estilos para eventos destacados */
+.rbc-event.featured-event {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.1)) !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Estilos para eventos de reventa */
+.rbc-event.resale-event {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1)) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Ajustes para la vista de semana */
+.rbc-time-view {
+  border: none;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 12px;
+}
+
+.rbc-time-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-time-content {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-today {
+  background-color: rgba(129, 140, 248, 0.1) !important;
+}
+
+/* Mejoras en la navegación */
+.rbc-toolbar {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rbc-toolbar button {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.rbc-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.rbc-toolbar button.rbc-active {
+  background: rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.3);
+  color: #818cf8;
+}
+
+.rbc-toolbar-label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.rbc-month-view {
+  border: none;
+}
+
+.rbc-month-row {
+  min-height: 100px;
+}
+
+.event-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  backdrop-filter: blur(4px);
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.event-popup-availability {
+  background: rgba(129, 140, 248, 0.1);
+  color: #818cf8;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.event-popup-button.sold-out {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  cursor: not-allowed;
+  opacity: 0.8;
+} 

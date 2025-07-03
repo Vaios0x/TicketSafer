@@ -1,0 +1,87 @@
+{
+  "name": "ticketsafer-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "La primera plataforma multichain de tickets NFT con soporte para Ethereum, Polygon, Arbitrum y Optimism",
+  "keywords": [
+    "NFT",
+    "tickets",
+    "blockchain",
+    "ethereum",
+    "polygon",
+    "web3",
+    "defi"
+  ],
+  "author": "TicketSafer Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "dev:debug": "vite --host --debug",
+    "dev:network": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "build:analyze": "vite build --mode analyze",
+    "build:staging": "vite build --mode staging",
+    "build:production": "vite build --mode production",
+    "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
+    "type-check": "tsc --noEmit",
+    "preview": "vite preview",
+    "preview:network": "vite preview --host 0.0.0.0 --port 4173",
+    "clean": "rm -rf dist node_modules/.vite",
+    "clean:install": "npm run clean && npm install",
+    "test": "echo \"Add your test command here\"",
+    "prepare": "npm run type-check"
+  },
+  "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.2.7",
+    "@tanstack/react-query": "^5.80.7",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.18.1",
+    "mapbox-gl": "2.15.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-big-calendar": "^1.19.4",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-map-gl": "7.1.7",
+    "react-router-dom": "^7.6.2",
+    "viem": "^2.31.2",
+    "wagmi": "^2.15.6"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.25.9",
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-legacy": "^6.1.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "sass": "^1.77.8",
+    "terser": "^5.43.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^1.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "packageManager": "npm@10.0.0"
+}

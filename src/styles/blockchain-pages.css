@@ -1,0 +1,418 @@
+/* Blockchain Pages Styles */
+.blockchain-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ethereum Page */
+.blockchain-page.ethereum {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 30%, #2563eb 70%, #1e3a8a 100%);
+}
+
+.blockchain-page.ethereum::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(30, 58, 138, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Polygon Page */
+.blockchain-page.polygon {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 30%, #8b5cf6 70%, #7c3aed 100%);
+}
+
+.blockchain-page.polygon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Arbitrum Page */
+.blockchain-page.arbitrum {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 30%, #06b6d4 70%, #0891b2 100%);
+}
+
+.blockchain-page.arbitrum::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(8, 145, 178, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Optimism Page */
+.blockchain-page.optimism {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 30%, #ef4444 70%, #dc2626 100%);
+}
+
+.blockchain-page.optimism::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.blockchain-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.blockchain-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 4rem 0;
+}
+
+.blockchain-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 4rem;
+  font-weight: bold;
+  border: 3px solid;
+}
+
+.blockchain-page.ethereum .blockchain-logo {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 58, 138, 0.2));
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.blockchain-page.polygon .blockchain-logo {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.2));
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
+.blockchain-page.arbitrum .blockchain-logo {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(8, 145, 178, 0.2));
+  border-color: #06b6d4;
+  color: #06b6d4;
+}
+
+.blockchain-page.optimism .blockchain-logo {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.2));
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.blockchain-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.blockchain-page.ethereum .blockchain-title {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page.polygon .blockchain-title {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page.arbitrum .blockchain-title {
+  background: linear-gradient(135deg, #06b6d4, #0891b2, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-page.optimism .blockchain-title {
+  background: linear-gradient(135deg, #ef4444, #dc2626, #f87171);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blockchain-subtitle {
+  font-size: 1.3rem;
+  color: #a0a0a0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.blockchain-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.blockchain-stat {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.blockchain-page.ethereum .blockchain-stat {
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.blockchain-page.polygon .blockchain-stat {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.blockchain-page.arbitrum .blockchain-stat {
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.blockchain-page.optimism .blockchain-stat {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.blockchain-stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.blockchain-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.blockchain-page.ethereum .blockchain-stat-value {
+  color: #2563eb;
+}
+
+.blockchain-page.polygon .blockchain-stat-value {
+  color: #8b5cf6;
+}
+
+.blockchain-page.arbitrum .blockchain-stat-value {
+  color: #06b6d4;
+}
+
+.blockchain-page.optimism .blockchain-stat-value {
+  color: #ef4444;
+}
+
+.blockchain-stat-label {
+  font-size: 1rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blockchain-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.blockchain-feature {
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.blockchain-page.ethereum .blockchain-feature {
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.blockchain-page.polygon .blockchain-feature {
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.blockchain-page.arbitrum .blockchain-feature {
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.blockchain-page.optimism .blockchain-feature {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.blockchain-feature:hover {
+  transform: translateY(-5px);
+  border-color: inherit;
+  opacity: 0.8;
+}
+
+.blockchain-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.blockchain-page.ethereum .blockchain-feature-icon {
+  color: #2563eb;
+}
+
+.blockchain-page.polygon .blockchain-feature-icon {
+  color: #8b5cf6;
+}
+
+.blockchain-page.arbitrum .blockchain-feature-icon {
+  color: #06b6d4;
+}
+
+.blockchain-page.optimism .blockchain-feature-icon {
+  color: #ef4444;
+}
+
+.blockchain-feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.blockchain-feature-description {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.blockchain-cta {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.blockchain-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.blockchain-cta-description {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blockchain-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blockchain-page.ethereum .blockchain-cta-button {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: #ffffff;
+}
+
+.blockchain-page.polygon .blockchain-cta-button {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #ffffff;
+}
+
+.blockchain-page.arbitrum .blockchain-cta-button {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: #ffffff;
+}
+
+.blockchain-page.optimism .blockchain-cta-button {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+}
+
+.blockchain-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blockchain-container {
+    padding: 0 1rem;
+  }
+  
+  .blockchain-title {
+    font-size: 2.5rem;
+  }
+  
+  .blockchain-hero {
+    padding: 2rem 0;
+  }
+  
+  .blockchain-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+  
+  .blockchain-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .blockchain-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .blockchain-feature,
+  .blockchain-stat {
+    padding: 1.5rem;
+  }
+  
+  .blockchain-cta {
+    padding: 2rem 0;
+  }
+  
+  .blockchain-cta-title {
+    font-size: 2rem;
+  }
+} 

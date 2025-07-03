@@ -1,0 +1,378 @@
+/* ===== ICONOS DE BLOCKCHAIN ESPECÍFICOS ===== */
+
+/* ESTILOS GLOBALES PARA ICONOS */
+.blockchain-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+/* ETHEREUM */
+.ethereum-icon {
+  color: #627EEA !important;
+  font-size: 18px;
+}
+
+/* POLYGON */
+.polygon-icon {
+  color: #8247E5 !important;
+  font-size: 18px;
+  transform: rotate(30deg);
+}
+
+/* ARBITRUM */
+.arbitrum-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #28A0F0 0%, #4FC3F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 2px 6px rgba(40, 160, 240, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* OPTIMISM */
+.optimism-icon {
+  color: #FF0420 !important;
+  font-size: 18px;
+  filter: drop-shadow(0 2px 4px rgba(255, 4, 32, 0.3));
+}
+
+/* HOVER EFFECTS */
+.chain-icon-wrapper:hover .blockchain-icon,
+.chain-icon-wrapper:hover .ethereum-icon,
+.chain-icon-wrapper:hover .polygon-icon,
+.chain-icon-wrapper:hover .optimism-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+.chain-icon-wrapper:hover .arbitrum-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(40, 160, 240, 0.5);
+}
+
+/* ICONOS EN BADGES */
+.chain-badge .chain-icon-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ICONOS EN MÉTODOS DE PAGO */
+.payment-icons .ethereum-icon,
+.payment-icons .polygon-icon,
+.payment-icons .optimism-icon {
+  font-size: 20px;
+}
+
+.payment-icons .arbitrum-icon {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ethereum-icon,
+  .polygon-icon,
+  .optimism-icon {
+    font-size: 16px;
+  }
+  
+  .arbitrum-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+  
+  .payment-icons .ethereum-icon,
+  .payment-icons .polygon-icon,
+  .payment-icons .optimism-icon {
+    font-size: 18px;
+  }
+  
+  .payment-icons .arbitrum-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}
+
+/* ===== ICONOS DE BLOCKCHAIN EN HERO ===== */
+
+.blockchain-icons-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  opacity: 0.9;
+}
+
+.blockchain-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  user-select: none;
+}
+
+/* Indicador visual de que es clicable */
+.blockchain-icon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #00ff88, #00ccff);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.blockchain-icon:hover::before {
+  opacity: 1;
+  animation: pulse-indicator 2s infinite;
+}
+
+@keyframes pulse-indicator {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.blockchain-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto de clic activo */
+.blockchain-icon:active {
+  transform: translateY(-3px) scale(1.02);
+  transition: all 0.1s ease;
+}
+
+.blockchain-icon-svg {
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+.blockchain-icon:hover .blockchain-icon-svg {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+  transform: scale(1.1);
+}
+
+.blockchain-icon-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.blockchain-icon:hover .blockchain-icon-name {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+/* Añadir texto indicativo en hover */
+.blockchain-icon::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.blockchain-icon:hover::after {
+  opacity: 1;
+  bottom: -35px;
+}
+
+/* Colores específicos para cada blockchain */
+.blockchain-icon.ethereum:hover {
+  background: rgba(98, 126, 234, 0.15);
+  border-color: rgba(98, 126, 234, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(98, 126, 234, 0.2),
+    0 0 20px rgba(98, 126, 234, 0.3);
+}
+
+.blockchain-icon.arbitrum:hover {
+  background: rgba(40, 160, 240, 0.15);
+  border-color: rgba(40, 160, 240, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(40, 160, 240, 0.2),
+    0 0 20px rgba(40, 160, 240, 0.3);
+}
+
+.blockchain-icon.optimism:hover {
+  background: rgba(255, 4, 32, 0.15);
+  border-color: rgba(255, 4, 32, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(255, 4, 32, 0.2),
+    0 0 20px rgba(255, 4, 32, 0.3);
+}
+
+.blockchain-icon.polygon:hover {
+  background: rgba(130, 71, 229, 0.15);
+  border-color: rgba(130, 71, 229, 0.3);
+  box-shadow: 
+    0 10px 30px rgba(130, 71, 229, 0.2),
+    0 0 20px rgba(130, 71, 229, 0.3);
+}
+
+/* Efectos de neón sutiles para los iconos */
+.blockchain-icon.ethereum:hover .blockchain-icon-svg {
+  filter: drop-shadow(0 0 15px rgba(98, 126, 234, 0.6));
+}
+
+.blockchain-icon.arbitrum:hover .blockchain-icon-svg {
+  filter: drop-shadow(0 0 15px rgba(40, 160, 240, 0.6));
+}
+
+.blockchain-icon.optimism:hover .blockchain-icon-svg {
+  filter: drop-shadow(0 0 15px rgba(255, 4, 32, 0.6));
+}
+
+.blockchain-icon.polygon:hover .blockchain-icon-svg {
+  filter: drop-shadow(0 0 15px rgba(130, 71, 229, 0.6));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blockchain-icons-section {
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .blockchain-icon {
+    padding: 0.75rem;
+    gap: 0.25rem;
+  }
+  
+  .blockchain-icon-svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .blockchain-icon-name {
+    font-size: 0.75rem;
+  }
+  
+  .blockchain-icon:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  /* Ocultar tooltip en móvil */
+  .blockchain-icon::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .blockchain-icons-section {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .blockchain-icon {
+    padding: 0.5rem;
+    min-width: 80px;
+  }
+  
+  .blockchain-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .blockchain-icon-name {
+    font-size: 0.7rem;
+  }
+}
+
+/* Animación de entrada escalonada */
+.blockchain-icon {
+  animation: slideInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.blockchain-icon:nth-child(1) { animation-delay: 0.1s; }
+.blockchain-icon:nth-child(2) { animation-delay: 0.2s; }
+.blockchain-icon:nth-child(3) { animation-delay: 0.3s; }
+.blockchain-icon:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respetar preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .blockchain-icon {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .blockchain-icon:hover {
+    transform: none;
+  }
+  
+  .blockchain-icon:hover .blockchain-icon-svg {
+    transform: none;
+  }
+
+  .blockchain-icon::before {
+    animation: none;
+  }
+} 
