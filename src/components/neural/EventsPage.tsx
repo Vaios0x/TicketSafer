@@ -12,28 +12,6 @@ import '../../styles/event-map.css';
 import '../../styles/events-page.css';
 import '../../styles/view-controls.css';
 
-interface Event {
-  id: number;
-  title: string;
-  date: string;
-  location: string;
-  price: number | string;
-  currency: 'ETH' | 'MATIC';
-  category: string;
-  description: string;
-  image: string;
-  chain: string;
-  type: string;
-  allowResale: boolean;
-  allowAuction: boolean;
-  totalTickets: number;
-  availableTickets: number;
-  trending: boolean;
-  isFeatured: boolean;
-  latitude: number;
-  longitude: number;
-}
-
 interface SearchData {
   query: string;
   category: string;
