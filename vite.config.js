@@ -39,6 +39,8 @@ export default defineConfig(({ command, mode }) => {
         includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg,gif,webp,woff,woff2}'],
+          // Aumentar límite de tamaño para archivos grandes de Web3
+          maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB instead of 2MB default
           // Estrategias de cache optimizadas
           runtimeCaching: [
             {
@@ -214,8 +216,8 @@ export default defineConfig(({ command, mode }) => {
       // Configuración de sourcemaps
       sourcemap: mode === 'development' ? true : false,
       
-      // Límites de warning ajustados
-      chunkSizeWarningLimit: 1000,
+      // Límites de warning ajustados para Web3 libraries
+      chunkSizeWarningLimit: 5000, // 5MB para permitir archivos Web3 grandes
       
       // Optimización de CSS
       cssCodeSplit: true,
