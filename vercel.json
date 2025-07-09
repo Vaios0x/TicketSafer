@@ -5,8 +5,9 @@
       "src": "ticketsafer-site/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
-        "buildCommand": "cd ticketsafer-site && npm install && npm run build"
+        "zeroConfig": true,
+        "root": "ticketsafer-site",
+        "distDir": "dist"
       }
     }
   ],
