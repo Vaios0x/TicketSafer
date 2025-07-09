@@ -11,7 +11,7 @@
     "dev:debug": "cross-env DEBUG=vite:* NODE_OPTIONS='--max-http-header-size=24576' vite --debug --port 3005",
     "dev:network": "cross-env NODE_OPTIONS='--max-http-header-size=24576' vite --host --port 3005",
     "build": "vite build",
-    "vercel-build": "cd ticketsafer-site && npm install && npm run build",
+    "vercel-build": "echo 'Using build command from vercel.json'",
     "preview": "vite preview --port 24680",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
