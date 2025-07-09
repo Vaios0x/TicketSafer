@@ -1,23 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_APP_URL": "https://ticket-safer.vercel.app",
-    "VITE_ENABLE_PWA": "true",
-    "VITE_ENABLE_WEB3_FEATURES": "true"
-  }
+  ]
 } 

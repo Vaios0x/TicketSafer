@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--max-http-header-size=24576' vite --port 3005",
+    "dev": "vite --port 3005",
     "dev:debug": "cross-env DEBUG=vite:* NODE_OPTIONS='--max-http-header-size=24576' vite --debug --port 3005",
     "dev:network": "cross-env NODE_OPTIONS='--max-http-header-size=24576' vite --host --port 3005",
     "build": "vite build",
@@ -32,6 +35,21 @@
     "@vitejs/plugin-react": "^4.2.1",
     "cross-env": "^7.0.3",
     "rimraf": "^5.0.1",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vite-plugin-node-polyfills": "^0.24.0"
+  },
+  "browserslist": {
+    "production": [
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
