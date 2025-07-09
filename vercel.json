@@ -1,32 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "ticketsafer-site/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "zeroConfig": true,
-        "root": "ticketsafer-site",
-        "distDir": "dist"
-      }
-    }
-  ],
+  "outputDirectory": "ticketsafer-site/dist",
+  "buildCommand": "cd ticketsafer-site && npm install && npm run build",
   "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" }
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "github": {
-    "enabled": true,
-    "silent": false
-  }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 } 
