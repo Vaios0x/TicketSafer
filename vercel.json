@@ -1,5 +1,14 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "ticketsafer-site/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "ticketsafer-site/dist"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",
