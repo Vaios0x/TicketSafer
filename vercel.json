@@ -1,7 +1,7 @@
 {
   "version": 2,
   "outputDirectory": "ticketsafer-site/dist",
-  "buildCommand": "cd ticketsafer-site && npm install && npm run build",
+  "buildCommand": "cd ticketsafer-site && npm install && cd .. && cd ticketsafer-site && npm run build",
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
